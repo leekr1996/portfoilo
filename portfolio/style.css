@@ -1,0 +1,1111 @@
+@charset 'UFT-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Voltaire&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Voltaire', sans-serif; */
+
+/* 전체설정 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: 'Voltaire', 'Noto Sans KR', serif;
+    overflow-x: hidden;
+    letter-spacing: 0.2rem;
+
+}
+
+
+/* header 설정 */
+header {
+    width: 100vw;
+    height: 100vh;
+}
+
+.top {
+    width: 100%;
+    height: 10%;
+}
+
+.button {
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #D4BCB0;
+    color: #555;
+    width: 5rem;
+    height: 5rem;
+    display: none;
+    text-align: center;
+    position: fixed;
+    right: 10rem;
+    bottom: 10rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.button i {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+
+
+h1 {
+    width: 30rem;
+    height: 4rem;
+    padding-top: 2rem;
+    margin-left: 2rem;
+}
+
+.top img {
+    width: 20rem;
+    height: 4.5rem;
+}
+
+
+.login {
+    width: 16rem;
+    height: 3rem;
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    font-size: 1.5rem;
+
+    /* background-color: #e9ddd7;
+   border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+.login ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.login li {
+    margin-left: 1rem;
+}
+
+/* .login li:nth-child(4) {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    color: #eee;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 3%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+} */
+
+.login li a {}
+
+
+.util {
+    width: 7rem;
+    height: 3rem;
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    margin-top: 3.5rem;
+
+}
+
+.util ul {
+    display: flex;
+}
+
+.util li {
+    width: 6rem;
+    height: 3rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.util li:nth-child(1) {
+    background-image: url(img/util1.png);
+    margin-right: 1rem;
+}
+
+.util li:nth-child(2) {
+    background-image: url(img/util2.png);
+}
+
+.util li a {}
+
+
+
+/* 메뉴설정 */
+.box {
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+
+nav {
+    width: 15%;
+    height: 100%;
+    font-size: 2.5rem;
+}
+
+nav .menu {
+    width: 100%;
+    height: 20%;
+}
+
+nav .menu_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav .menu .menu_box a:hover {
+    font-weight: bold;
+}
+
+
+nav .menu:nth-child(1) {
+    background-color: #e9ddd7;
+}
+
+nav .menu:nth-child(2) {
+    background-color: #E5D7CF;
+}
+
+nav .menu:nth-child(3) {
+    background-color: #E1D0C7;
+}
+
+nav .menu:nth-child(4) {
+    background-color: #D8C2B7;
+}
+
+nav .menu:nth-child(5) {
+    background-color: #D4BCB0;
+}
+
+
+
+/* 서브메뉴설정 */
+
+.depth2_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.depth2_1 li {
+    width: 100%;
+    margin-top: 5.5%;
+    position: relative;
+}
+
+.depth2_1 li a {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.depth2_1 span {
+    position: absolute;
+    width: 0;
+    height: 1rem;
+    background-color: #eee;
+    opacity: 0.7;
+    top: 70%;
+    left: 20%;
+    transition: all 1s;
+}
+
+.depth2_1 li:hover span {
+    width: 60%;
+}
+
+.menu .menu_box:hover .depth2_1 {
+    right: -15%;
+    opacity: 1;
+}
+
+
+.depth2_2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.depth2_2 li {
+    width: 100%;
+    margin-top: 9%;
+    position: relative;
+}
+
+.depth2_2 li a {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.depth2_2 span {
+    position: absolute;
+    width: 0;
+    height: 1.5rem;
+    background-color: #eee;
+    opacity: 0.6;
+    top: 70%;
+    left: 20%;
+    transition: all 0.8s;
+}
+
+.depth2_2 li:hover span {
+    width: 60%;
+}
+
+.menu .menu_box:hover .depth2_2 {
+    right: -15%;
+    opacity: 1;
+}
+
+
+.menu:nth-child(1) .depth2_1 {
+    background-color: #e9ddd7;
+}
+
+.menu:nth-child(2) .depth2_1 {
+    background-color: #E5D7CF;
+}
+
+.menu:nth-child(3) .depth2_1 {
+    background-color: #E1D0C7;
+}
+
+.menu:nth-child(4) .depth2_2 {
+    background-color: #D8C2B7;
+}
+
+.menu:nth-child(5) .depth2_2 {
+    background-color: #D4BCB0;
+}
+
+
+
+
+
+/* 메인사진설정 */
+
+.main {
+    width: 85%;
+    height: 100%;
+
+}
+
+.main p:nth-child(1) {
+    width: 85%;
+    height: 100%;
+    background-image: url(img/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: -1;
+}
+
+.main p:nth-child(2) {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    text-align: right;
+}
+
+
+/* 섹션설정 */
+
+#wrap {}
+
+#wrap section {
+    width: 100%;
+margin-top: 2rem;
+padding-top: 2rem;
+}
+
+#wrap section:nth-child(1) {
+    height: 1080px;
+}
+
+#wrap section:nth-child(2) {
+    height: 400px;
+}
+
+#wrap section:nth-child(3) {
+    height: 800px;
+
+}
+
+#wrap section:nth-child(4) {
+    height: 400px;
+}
+
+.footer {
+    width: 100%;
+    height: 20px;
+    margin-top: 10rem;
+}
+
+
+/* con1설정 */
+
+.con1 {
+    width: 100%;
+    height: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.con1 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #7B6A61;
+    border-bottom: #D4BCB0 6px solid;
+    border-right: #D4BCB0 6px solid;
+    width: 85px;
+    height: 40px;
+
+}
+
+.con1 p {
+    font-size: 2rem;
+    color: #555555;
+    line-height: 1.8;
+    margin-top: 5%;
+
+}
+
+.con1 strong {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #B1998D;
+
+}
+
+
+.con1 ul {
+    position: relative;
+    margin-top: 20px;
+}
+
+.con1 li {}
+
+.con1 li:nth-child(1) {
+    width: 900px;
+    height: 600px;
+    background-image: url(img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.con1 li:nth-child(2) {
+    width: 900px;
+    height: 600px;
+    background-color: #E2D4CC;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-right: -500px;
+    margin-top: -250px;
+    z-index: -1;
+}
+
+.con1 li:nth-child(3) {
+    width: 220px;
+    height: 220px;
+    background-image: url(img/2.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-right: -580px;
+    margin-top: -300px;
+    transform: rotate(-5deg);
+    animation: ani1 1s infinite;
+}
+
+.con1 li:nth-child(4) {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/3.png);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-right: -560px;
+    margin-top: px;
+    animation: ani2 1s infinite;
+}
+
+.con1 li:nth-child(5) {
+    width: 250px;
+    height: 250px;
+    background-image: url(img/4.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-right: -350px;
+    margin-top: 220px;
+    transform: rotate(-15deg);
+    animation: ani1 1s infinite;
+}
+
+.con1 li:nth-child(6) {
+    width: 150px;
+    height: 150px;
+    background-image: url(img/5.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: 250px;
+    transform: rotate(5deg);
+    animation: ani2 1s infinite;
+}
+
+.con1 li:nth-child(7) {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/6.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -500px;
+    margin-top: 250px;
+    transform: rotate(-5deg);
+    animation: ani1 1s infinite;
+}
+
+@keyframes ani1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes ani2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.txt {
+    display: none;
+}
+
+.cursor {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    margin-top: 500px;
+    font-weight: bold;
+    font-size: 2.8rem;
+    animation: ani5 0.3s infinite;
+}
+
+@keyframes ani5 {
+    0% {
+        border-right: 1px solid #fff;
+    }
+
+    50% {
+        border-right: 1px solid #000;
+    }
+
+    100% {
+        border-right: 1px solid #fff;
+    }
+}
+
+/* con2 설정 */
+
+.con2 {
+    width: 100%;
+    height: 400px;
+}
+
+.con2 ul {
+    width: 100%;
+    height: 400px;
+    background-image: url(img/banner.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con2 li {}
+
+.con2 li:nth-child(1) {}
+
+.con2 li:nth-child(2) {
+    width: 100%;
+    height: 200px;
+    color: #eee;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+
+/* con3 설정 */
+
+.con3 {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.con3 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #7B6A61;
+    border-bottom: #D4BCB0 6px solid;
+    border-right: #D4BCB0 6px solid;
+    width: 220px;
+    height: 40px;
+
+}
+
+
+.con3txt {
+    position: relative;
+    width: 100%;
+    height: 800px;
+
+}
+
+.con3txt>p {
+    width: 450px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E2D4CC;
+    margin-top: 30px;
+
+}
+
+section:nth-child(3) .con3-1 {
+    width: 95%;
+    height: 300px;
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    transform: translateX(-300px);
+    transition: all 1s;
+    opacity: 0;
+    display: flex;
+}
+
+section:nth-child(3).on .con3-1 {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.con3-1img {
+    width: 430px;
+    height: 300px;
+    background-color: #D4BCB0;
+
+}
+
+
+.con3-1img img {
+    width: 430px;
+    height: 300px;
+    background-color: #D4BCB0;
+}
+
+.con3-1img:hover img {
+    width: 430px;
+    height: 300px;
+    background-color: #D4BCB0;
+    opacity: 0.5;
+    border: 10px solid #555;
+    box-sizing: border-box;
+
+}
+
+.con3-1img i {
+    width: 430px;
+    height: 300px;
+    font-size: 5rem;
+    color: #555;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.con3-1img:hover i {
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+
+.con3-1txt {
+    width: 100%;
+    height: 100%;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.con3-1txt h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #B1998D;
+
+}
+
+.con3-1txt p {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: #555555;
+    line-height: 1.5;
+
+}
+
+.con3-1txt a {
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-color: #555555;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-size: 2.8rem;
+    color: #eee;
+    text-align: center;
+    padding-top: 5px;
+
+}
+
+.con3-1txt a:hover {
+    font-weight: bold;
+}
+
+
+
+
+
+section:nth-child(3) .con3-2 {
+    width: 95%;
+    height: 300px;
+    position: absolute;
+    right: 5%;
+    top: 37%;
+    margin-top: 30px;
+    transform: translateX(300px);
+    transition: all 1s;
+    opacity: 0;
+    display: flex;
+
+}
+
+section:nth-child(3).on .con3-2 {
+    transform: translateX(0px);
+    opacity: 1;
+
+}
+
+.con3-2img {
+    width: 430px;
+    height: 300px;
+    background-color: #D4BCB0;
+}
+
+.con3-2img img {
+    width: 430px;
+    height: 300px;
+    background-color: #D4BCB0;
+}
+
+.con3-2img:hover img {
+    width: 430px;
+    height: 300px;
+    background-color: #D4BCB0;
+    opacity: 0.5;
+    border: 10px solid #555;
+    box-sizing: border-box;
+}
+
+.con3-2img i {
+    width: 430px;
+    height: 300px;
+    font-size: 5rem;
+    color: #555;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.con3-2img:hover i {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.con3-2txt {
+    width: 100%;
+    height: 100%;
+    margin-right: 50px;
+    text-align: right;
+    margin-top: 30px;
+}
+
+.con3-2txt h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #B1998D;
+
+}
+
+.con3-2txt p {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #555555;
+    line-height: 1.5;
+
+}
+
+.con3-2txt a {
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-color: #555555;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-size: 2.8rem;
+    color: #eee;
+    text-align: center;
+    padding-top: 5px;
+    float: right;
+}
+
+.con3-2txt a:hover {
+    font-weight: bold;
+}
+
+
+
+/* con4설정 */
+
+.con4 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.con4txt {
+    width: 100%;
+
+}
+
+.con4txt h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #7B6A61;
+    border-bottom: #D4BCB0 6px solid;
+    border-right: #D4BCB0 6px solid;
+    width: 140px;
+    height: 40px;
+
+}
+
+.con4txt p {
+    width: 100%;
+    height: 300px;
+    background-color: #E2D4CC;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    display: block;
+    z-index: -1;
+}
+
+
+
+.con4img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trailer {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trailer ul {
+    width: 100%;
+    height: 375px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer ul:nth-child(1) {
+    left: 0;
+    animation: ani3 15s linear infinite;
+}
+
+.trailer ul:nth-child(2) {
+    left: 100%;
+    animation: ani4 15s linear infinite;
+}
+
+
+@keyframes ani3 {
+
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -100%;
+    }
+
+    50.00001% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes ani4 {
+    0% {
+        left: 100%;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.con4img:hover ul:nth-child(1) {
+    animation-play-state: paused;
+}
+
+.con4img:hover ul:nth-child(2) {
+    animation-play-state: paused;
+}
+
+.trailer li {
+    width: 650px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 1.2;
+
+}
+
+
+.t1 {
+    background-image: url(img/9.png);
+    background-size: 100%;
+    margin-bottom: 60px;
+}
+
+.t2 {
+    background-image: url(img/10.png);
+    background-size: 90%;
+}
+
+.t3 {
+    background-image: url(img/11.png);
+    background-size: 90%;
+    margin-bottom: 30px;
+}
+
+.t4 {
+    background-image: url(img/12.png);
+    background-size: 90%;
+    margin-bottom: 30px;
+}
+
+.t5 {
+    background-image: url(img/13.png);
+    background-size: 90%;
+}
+
+.t6 {
+    background-image: url(img/14.png);
+    background-size: 80%;
+    margin-bottom: 40px;
+}
+
+.t1:hover {
+    background-size: 105%;
+}
+
+.t2:hover {
+    background-size: 100%;
+}
+
+.t3:hover {
+    background-size: 100%;
+}
+
+.t4:hover {
+    background-size: 100%;
+}
+
+.t5:hover {
+    background-size: 100%;
+}
+
+.t6:hover {
+    background-size: 90%;
+}
+
+
+/* footer 설정 */
+
+.footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer ul {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foter li {}
+
+.footer li:nth-child(1) {
+    width: 150px;
+    height: 20px;
+    margin-right: 150px;
+}
+
+.footer li:nth-child(2) {
+    font-size: 1.5rem;
+    line-height: 30px;
+}
+
+
+/* 1050px 이상일 때 설정 */
+@media (min-width:1050px) {
+
+
+    .con1,
+    .con3,
+    .con4txt,
+    .con4img {
+        width: 1050px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media all and (max-width:750px) {
+
+    html {
+        font-size: 50%;
+    }
+}
